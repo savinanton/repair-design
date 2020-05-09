@@ -1,0 +1,28 @@
+.hero
+  position: relative
+  background: $dark url('../img/hero-bg.jpg')  no-repeat center / cover
+  height: 100vh  // тобы ровнялась всему экрану, 100%, если вдруг не загрузиться img то текст не будет видно
+  color: $light
+  &__instagram
+    position: absolute
+    max-width: 80px
+    height: 100%
+    left: 0
+    top: 0
+    max-width: 80px
+    height: 100%
+.instagram
+  background-color: $dark
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__link
+    text-transform: uppercase
+    text-decoration: none
+    color: $primary
+    // переварачиваем, добавить для этого inline-block, пробовать разные углы
+    // витоге с flex лучше получилось
+    transform: rotate(-90deg)  
+.title
+  margin: 0
