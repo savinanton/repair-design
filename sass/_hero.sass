@@ -8,7 +8,14 @@
   background: $dark url('../img/hero-bg.jpg')  no-repeat center / cover
   height: 100vh  // тобы ровнялась всему экрану, 100%, если вдруг не загрузиться img то текст не будет видно
   color: $light
+  &::before // затемнение для картинки
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba($dark,0.7)
   &__content
+    position: relative // затемнение для картинки стало назад, картинка выехала вперед
     max-width: 670px //чтобы перенеслиь на новую строчку 
   &__text
     font-size: 22px
@@ -36,18 +43,35 @@
     text-transform: uppercase
     color: $light
     text-decoration: none
+    &::after  //кружок возле листайте вниз, стрелока вставлена
+      content: ''
+      background: url(../img/arrow-down.svg) no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      margin-left: 12px
 .instagram
   background-color: $dark
   display: flex
   justify-content: center
   align-items: center
   &__link
+    display: flex // не появлялась линия без этого
+    align-items: center 
     text-transform: uppercase
     text-decoration: none
     color: $primary
     // переварачиваем, добавить для этого inline-block, пробовать разные углы
     // витоге с flex лучше получилось
-    transform: rotate(-90deg)  
+    transform: rotate(-90deg)   
+    &::before
+      content: '' // должно быть
+      width: 50px
+      height: 1px
+      background-color: $primary
+      margin-right: 8px
+      
 .title
   margin: 0
   font-family: 'Yeseva One' , cursive
