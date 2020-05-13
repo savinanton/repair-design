@@ -55,6 +55,20 @@
       border: 2px solid $primary
       border-radius: 50%
       margin-left: 12px
+  &__content
+    position: relative
+    max-width: 47.86rem
+  &__title
+    margin-bottom: 1rem
+  &__text
+    max-width: 500px
+    font-size: 1.57rem
+    line-height: 131%
+    margin: 0
+    margin-bottom: 3rem
+  &__button
+    margin-right: 20px
+    padding: 10px 35px
 .instagram
   background-color: $dark
   display: flex
@@ -69,6 +83,8 @@
     // переварачиваем, добавить для этого inline-block, пробовать разные углы
     // витоге с flex лучше получилось
     transform: rotate(-90deg)   
+    line-height: 0.8
+    font-size: 1.1rem
     &::before
       content: '' // должно быть
       width: 50px
@@ -80,5 +96,6 @@
   font-family: 'Yeseva One' , cursive
   text-transform: uppercase
   font-size: 2.857rem
+  line-height: 1.4
   &--primary
     color: $primary
