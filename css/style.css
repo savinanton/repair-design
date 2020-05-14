@@ -503,7 +503,7 @@ body {
   .nav__item {
     margin-right: 1rem; } }
 
-@media screen and (max-width: 992 px) {
+@media screen and (max-width: 992px) {
   .nav {
     display: none; }
   .hero__instagram {
