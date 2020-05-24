@@ -648,7 +648,7 @@ img {
     cursor: pointer; }
   .modal__title {
     font-family: 'Yeseva One', cursive;
-    font-size: 1.354rem;
+    font-size: 1.6rem;
     text-align: center;
     margin: 0;
     margin-bottom: 2.428rem; }
@@ -662,7 +662,13 @@ img {
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    font-family: FuturaDemiC;
+    font-size: 1.1rem; }
+
+.policy__label {
+  font-family: FuturaBookC;
+  font-size: 1.35rem; }
 
 @media screen and (max-width: 1200px) {
   html {
