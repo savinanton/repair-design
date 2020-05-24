@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) { 
  const modal = document.querySelector(".modal");   //обратимся к окну
  const modalBtn = document.querySelectorAll("[data-toggle=modal]");
  const closeBtn = document.querySelector(".modal__close");
@@ -10,7 +10,7 @@
   });
 closeBtn.addEventListener("click", switchModal);
 });
-*/
+/*
 $(document).ready(function () {
   var modal = $(".modal"),
       modalBtn = $("[data-toggle=modal]"),
@@ -23,3 +23,5 @@ $(document).ready(function () {
     modal.toggleClass("modal--visible");
   });
 });
+
+*/
