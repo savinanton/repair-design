@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function (event) {
   const modal = document.querySelector(".modal"); //обратимся к окну
   const modalBtn = document.querySelectorAll("[data-toggle=modal]");
@@ -10,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   closeBtn.addEventListener("click", switchModal);
 });
+*/
 
-/*
 $(document).ready(function () {
   var modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
@@ -23,5 +24,25 @@ $(document).ready(function () {
   closeBtn.on("click", function () {
     modal.toggleClass("modal--visible");
   });
+
+//слайдер 1
+  var mySwiper = new Swiper(".swiper-container", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+
+var next = $(".swiper-button-next");
+var prev = $(".swiper-button-prev");
+var bullets = $(".swiper-pagination");
+
+next.css ('left', prev.width() +20 + bullets.width () +20 );
+bullets.css ('left', prev.width() +20);
+
 });
-*/

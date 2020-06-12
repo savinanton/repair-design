@@ -27,10 +27,11 @@
   .desing
     &__card
       margin-bottom: 5rem
+ 
 
 @media screen and ( max-width: 570px )
   .container
-    width: 90%
+    width: 91%
   .contacts
     &__button
       display: none
@@ -40,31 +41,147 @@
       text-decoration: none
   .hero
     &__title
-      font-size: 1.64rem
+      font-size: 1.919rem
       line-height: 132.83%
       max-width: 27.3rem
       margin-bottom: 1rem
     &__content
-      max-width: 22.86rem
+      max-width: 28.18rem
     &__text
-      font-size: 1.29rem
+      font-size: 1.5rem
       line-height: 130%
       margin-bottom: 2.28rem
     &__button
       display: block
       min-width: 100%
-      margin-bottom: 1.85rem
+      min-height: 4.265rem   
       font-weight: normal
       letter-spacing: 0.1px
     &__scroll-down
       display: none
+    .button
+      &--primary
+        margin-bottom: 2.182rem
+      &--outline
+        margin-bottom: 5.1rem
+
+  .section-title
+    &__heading
+      font-size: 185%
+    &__image
+      margin-bottom: 3.5rem
+  .section-design
+    &__heading
+      font-family: Yeseva One
+      font-size: 185%
+      margin-bottom: 1.2rem
+    &__subtitle
+      margin: -1.5rem auto
+      width: 24.86rem
+      line-height: 135.84%
+      font-size: 1.27rem
+      letter-spacing: 0.3px
+  
+  .design
+    &__section-subtitle
+      font-size: 1rem
+      margin-bottom: 4.5rem
+    .card
+      &__text
+        margin-top: -12.3rem
+        margin-bottom: 5.5rem
+      &__list
+        margin-bottom: 4rem
+      &__title
+        margin-top: 0.0rem
+      &__price--tag
+        font-size: 130%
+        width: 16rem
+        padding: 1rem 2rem 0.8rem 1.4rem
+        margin-bottom: 1.2rem
+  .types
+    .card
+      &__text
+        margin-bottom: 7.5rem
+
   .card
     &__pricetag
+      display: block
       width: 15.888rem
       height: 3.35rem
       padding-top: 1rem
-      
+    &__list
+      margin-top: 1rem
+      line-height: 170%
+      margin-bottom: 2.8rem
+    &__title
+      margin-left: -0.4rem 
+      margin-top: 0.3rem
+      font-size: 123%
+    &__text
+      margin-top: -12.5rem
+      padding-left: 3rem
+      padding-bottom: 0.2rem
+      max-width: 78%
 
+  .card-list 
+    &__desktop
+      display: none
+    &__mobile
+      display: block
+  .types
+    &__section-title
+      margin-bottom: 3.5rem
+    &__word
+      &::after 
+        display: none 
+  .col-40
+    width: 90%
+    margin-left: 2rem
+  .col-60
+    width: 105%
+    margin-top: 0
+    margin-right: -2rem
+
+
+
+  .section-title
+    &__word
+      &::after
+        display: none
+    &__text
+      font-size: 1.2rem
+      font-weight: normal
+      margin-top: 2rem
+      margin-bottom: 2.5rem
+      line-height: 1.8rem
+  .swiper-container
+    margin-right: 2rem
+  .swiper-slide
+    margin-bottom: 3rem
+    &--photo
+      margin-top: 2.7rem
+      max-height: 16.8rem
+      width: 100%
+      margin-bottom: -1.5rem
+    &__heading
+      font-size: 1rem
+      font-weight: normal
+      letter-spacing: 1.5px
+    &__text
+      flex-basis: 50%
+      margin-bottom: 1.7rem
+ 
+  .swiper-container-horizontal>.swiper-pagination-bullets
+    width: auto
+    bottom: 1px
+
+@media screen and ( min-width: 571px )
+  .card-list
+    &__mobile
+      display: none
+    &__desktop
+      display: block
 
 @media screen and ( max-height: 520px )
   .hero

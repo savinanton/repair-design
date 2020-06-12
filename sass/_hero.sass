@@ -17,6 +17,15 @@
     background-color: rgba($dark, 0.7)
     top: 0
     left: 0
+  &::after
+    content: ''
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 3.46rem
+    background-color: $dark
   &__content
       max-width: 47.85rem
       position: relative
@@ -41,6 +50,7 @@
     left: 0
     top: 0
   &__scroll-down
+    z-index: 3
     position: absolute
     display: flex
     align-items: center
