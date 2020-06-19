@@ -31,15 +31,15 @@
   &--light 
     &::placeholder 
       color: $light
+
 .policy
   &__checkbox 
     opacity: 0
     visibility: hidden
-    &:checked ~
+    &:checked +
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
-
   &__label
     display: flex
     align-items: center 
@@ -55,8 +55,15 @@
     &--center
       justify-content: center
 label
+  position: relative
   &.invalid
     color: tomato 
+    position: absoulte
+    left: 0
+    top: 25px
+    color: red
+    // margin-top: 2.5rem
 input 
   &.invalid
+    // margin-top: 1rem
     border-bottom: 1px solid tomato 

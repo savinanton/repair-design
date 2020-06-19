@@ -364,7 +364,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked ~ .policy__label::before {
+  .policy__checkbox:checked + .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -382,8 +382,14 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-label.invalid {
-  color: tomato; }
+label {
+  position: relative; }
+  label.invalid {
+    color: tomato;
+    position: absoulte;
+    left: 0;
+    top: 25px;
+    color: red; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -866,6 +872,7 @@ img {
     .footer__input--full-width {
       flex-basis: 100%; }
   .footer__policy {
+    position: relative;
     flex-basis: 100%;
     margin-bottom: 2rem; }
   .footer__button {
@@ -874,7 +881,10 @@ img {
     padding: 1.3rem 4.7rem; }
   .footer__menu {
     background-color: #131313;
-    padding: 4.285rem 0; }
+    padding: 4.285rem 0;
+    margin-top: 5rem; }
+  .footer__map {
+    min-height: 465px; }
 
 .modal {
   opacity: 0;
@@ -932,10 +942,13 @@ img {
     font-family: FuturaDemiC;
     font-size: 0.95rem;
     padding: 1.3rem 2.91rem; }
-
-.policy__label {
-  font-family: FuturaBookC;
-  font-size: 1.2rem; }
+  .modal__policy {
+    flex-basis: 100%;
+    margin-top: 1rem; }
+    .modal__policy-label {
+      font-family: FuturaBookC;
+      font-size: 1.2rem;
+      justify-content: center; }
 
 @media screen and (max-width: 1200px) {
   html {

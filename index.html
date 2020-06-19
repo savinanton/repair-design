@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8d27366d-b461-40e8-9e7d-0f073caf80a7&lang=ru_RU" type="text/javascript">
+    </script>
     <title>Document</title>
   </head>
 
@@ -273,20 +274,10 @@
             <button class="button button--primary control__button">
               Отправить
             </button>
+
             <div class="policy control__policy">
-              <input
-                type="checkbox"
-                name="policy-chekbox"
-                id="policy-chekbox"
-                class="policy__checkbox"
-                checked
-              />
-              <label
-                for="policy-chekbox"
-                class="policy__label control__policy-label"
-              >
-                я соглашаюсь с обработкой данных
-              </label>
+              <input type="checkbox" name="policy-chekbox" id="policy-chekbox" class="policy__checkbox"  />
+              <label for="policy-chekbox" class="policy__label control__policy-label" > я соглашаюсь с обработкой данных </label>
             </div>
             <!-- /.policy -->
           </form>
@@ -560,20 +551,25 @@
             <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light"
               >Имя</label >
-               <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:" /> 
+               <input type="text" name="userName" class="input form__input footer__input input--light" 
+               id="user-name" placeholder="Как Вас зовут:" /> 
               </div>
               <div class="input-group footer__input-group">
                 <label for="user-phone" class="label form__label label--light" >Телефон</label >
-                  <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:" /> 
+                  <input type="tel" name="userPhone" class="input form__input modal__input input--light" 
+                  id="user-phone" placeholder="Ваш номер телефона:" /> 
               </div>
               <div class="input-group footer__input-group footer__input-group--full-width">
                 <label for="user-question" class="label form__label label--light" >Вопрос</label >
-                  <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:" /> 
+                  <input type="text" class="input form__input footer__input input--light" 
+                  id="user-question" placeholder="Я хочу спросить:" /> 
                 </div>
 
                   <div class="policy footer__policy"> 
-                   <input type="checkbox" name="policy-chekbox" id="policy-chekbox" class="policy__checkbox" checked/>             
-              <label for="policy-chekbox" class="policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
+                   <input type="checkbox" name="CheckboxFooter" id="policy-сheckbox-2" class="policy__checkbox" checked/> 
+                   
+                   <label for="policy-сheckbox-2" id="CheckboxFooter" class="policy__label policy__label--center">
+                я соглашаюсь с обработкой данных</label>
             </div>
             <!-- /.policy -->
             <button class="button button--primary footer__button">
@@ -582,6 +578,8 @@
           </form> 
          </div>
          <!-- /.footer-wrap -->
+         <div class="map footer__map" id="map">
+          
        </div>
        <!-- /.container -->
        <div class="footer__menu">
@@ -597,12 +595,10 @@
               <a href="#" class="nav__item">Контакты</a>
             </nav>
             <div class="contacts menu__contacts animate__animated animate__swing animate__delay-3s">
-              <a href="tel:+79997683299" class="phone contacts__phone "
-                >+7 (999) 768-32-99</a>
+              <a href="tel:+79997683299" class="phone contacts__phone" >+7 (999) 768-32-99</a>
               <button
                 class="button contacts__button button--primary"
-                data-toggle="modal"
-              >
+                data-toggle="modal">
                 Заказать звонок
               </button>
             </div>
@@ -621,28 +617,28 @@
         <form action="#" class="form modal__form">
 
           <div class="input-group modal__input-group">
-            <label for="user-name" class="label form__label label--light" >Имя</label> <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:" />
+            <label for="user-name" class="label form__label label--light" >Имя</label> 
+            <input type="text" name="userName" class="input form__input modal__input input--light" 
+            id="user-name" placeholder="Как вас зовут:" />
           </div>
 
           <div class="input-group modal__input-group">
-            <label for="user-phone" class="label form__label label--light" >Телефон</label> <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:" />
+            <label for="user-phone" class="label form__label label--light" >Телефон</label> 
+            <input type="tel" name="userPhone" class="input form__input modal__input input--light" 
+            id="user-phone" placeholder="Ваш номер телефона:" />
           </div>
 
           <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label--light"> Email</label> <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email" /> 
+          <label for="user-email" class="label form__label label--light"> Email</label> 
+          <input type="email" name="userEmail" class="input form__input modal__input input--light"
+           id="user-email" placeholder="Ваш email" /> 
         </div>
 
           <div class="policy modal__policy">
-            <input
-              type="checkbox"
-              name="policy-chekbox"
-              id="policy-chekbox"
-              class="policy__checkbox"
-              checked
-            />
-            <label for="policy-chekbox" class="policy__label"
-              >я соглашаюсь с обработкой данных</label
-            >
+
+            <input type="checkbox" name="policyCheckbox5" id="policy-chekbox4" class="policy__checkbox"  />
+            <label for="policy-chekbox4" id="policyCheckbox5" class="policy__label modal__policy-label"
+              >я соглашаюсь с обработкой данных</label >
           </div>
           <!-- /.policy -->
           <button class="button button--primary modal__button">

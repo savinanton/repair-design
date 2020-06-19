@@ -52,36 +52,87 @@ $(document).ready(function () {
     errorClass: "invalid",
     rules: {
       // строчное правило
-      userName:  {
+      userName: {
         required: true,
-        minlength: 2
-    },
-      userPhone: "required",
-      // compound rule - правило обьект (блок)
+        minlength: 2,
+      },
+      userPhone: {
+        required: true,
+        minlength: 17,
+        maxlength: 17,
+      },
+
       userEmail: {
         required: true,
-        email: true
-      }
+        email: true,
+      },
     }, // сообщения
     messages: {
       userName: {
         required: "Имя обязательно",
-        minlength: "Имя не короче двух букв"
+        minlength: "Имя не короче двух букв",
       },
-      userPhone: "Телефон обязателен",
+      userPhone: {
+        required: "Телефон обязательно",
+        minlength: "Минимум 11 цифр",
+        maxlength: "Максимум 11 цифр",
+      },
       userEmail: {
         required: "Обязательно укажите email",
-        email: "Введите в формате name@domain.com"
-      }
-    }
+        email: "Введите в формате name@domain.com",
+      },
+    },
   });
-  
-  //маска для номера телефона 
-  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-__-___"});
+
+  //маска для номера телефона
+  $("[type=tel]").mask("+7(000) 00-00-000", {
+    placeholder: "+7 (___) __-__-__-___",
+  });
+
+  //создание яндекс карты
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map(
+        "map",
+        {
+          center: [47.244729, 39.723187],
+          zoom: 9,
+        },
+        {
+          searchControlProvider: "yandex#search",
+        }
+      ),
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+      myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(),
+        {
+          hintContent: "Наш офис",
+          balloonContent: "Вход со двора",
+        },
+        {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: "default#image",
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/location.png',
+          // Размеры метки.
+          iconImageSize: [32, 32],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+        });
+
+
+    myMap.geoObjects
+
+    .add(myPlacemark);
+  });
 });
 
 //валидация
-$("#form").validate({
+$("footer__form").validate({
   errorClass: "invalid",
   rules: {
     // строчное правило
@@ -90,9 +141,9 @@ $("#form").validate({
       minlength: 2,
       maxlength: 15,
     },
-    CheckboxFooter: {
-      required: true,
-    },
+    // CheckboxFooter: {
+    //   required: true,
+    // },
     userPhone: {
       required: true,
       minlength: 17,
@@ -120,12 +171,10 @@ $("#form").validate({
       email: "Введите в формате: name@domain.com",
     },
   },
-  
 });
 
-
 //валидация
-$(".control__form").validate({
+$(".#form").validate({
   errorClass: "invalid",
   rules: {
     // строчное правило
@@ -144,7 +193,7 @@ $(".control__form").validate({
       required: true,
       email: true,
     },
-    checkboxControl: {
+    CheckboxFooter: {
       required: true,
     },
   },
@@ -164,5 +213,4 @@ $(".control__form").validate({
       email: "Введите в формате: name@domain.com",
     },
   },
- 
 });
