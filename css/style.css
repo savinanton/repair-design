@@ -693,7 +693,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .projects {
   padding-bottom: 30rem; }

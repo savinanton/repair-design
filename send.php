@@ -17,7 +17,7 @@ try {
     $mail->SMTPDebug = 0;                      // Enable verbose debug output
       $mail->CharSet= 'UFT-8'
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'ssl://smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'sawinweb@gmail.com';                     // SMTP username
     $mail->Password   = 'bong72911';                               // SMTP password

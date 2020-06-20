@@ -9,6 +9,7 @@
       rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8d27366d-b461-40e8-9e7d-0f073caf80a7&lang=ru_RU" type="text/javascript">
     </script>
@@ -16,6 +17,7 @@
   </head>
 
   <body>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(65036842, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/65036842" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <header class="header">
       <div class="container">
         <div class="menu">
@@ -237,8 +239,11 @@
             <!-- /.section-title__image -->
           </div>
           <!-- /.section-title -->
-          <div class="control__video video">
-            <img src="img/play-icon.svg" alt="play icon" class="video__play" />
+          <div class="control__video video" id="player">
+            <a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=RHzzLqJWqHs">
+              <img src="img/play-icon.svg" alt="play icon"  />
+            </a>
+           
           </div>
           <!-- /.control__video video -->
           <p class="control__text">
@@ -248,7 +253,7 @@
             трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы
             получить ссылку на трансляцию.
           </p>
-          <form action="#" class="form control__form">
+          <form action="send.php" method="POST" class="form control__form">
             <div class="control__input-group">
               <label for="user-name" class="label form__label control__label"
                 >Имя</label
@@ -547,7 +552,7 @@
        <div class="container">
          <div class="footer__wrap">
            <h3 class="footer__title">Остались вопросы?</h3>
-          <form action="#" class="form footer__form" id="form">
+          <form action="send.php" method="POST" class="form footer__form" id="form">
             <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light"
               >Имя</label >
@@ -650,11 +655,14 @@
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
