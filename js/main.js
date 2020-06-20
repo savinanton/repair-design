@@ -82,6 +82,18 @@ $(document).ready(function () {
         email: "Введите в формате name@domain.com",
       },
     },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert("Форма отправлена, мы свяжемся с Вами через 10 минит");
+          $(form)[0].reset();
+          modal.remove("modal--visible");
+        },
+      });
+    },
   });
 
   //маска для номера телефона
@@ -116,18 +128,16 @@ $(document).ready(function () {
           // Необходимо указать данный тип макета.
           iconLayout: "default#image",
           // Своё изображение иконки метки.
-          iconImageHref: 'img/location.png',
+          iconImageHref: "img/location.png",
           // Размеры метки.
           iconImageSize: [32, 32],
           // Смещение левого верхнего угла иконки относительно
           // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-        });
+          iconImageOffset: [-5, -38],
+        }
+      );
 
-
-    myMap.geoObjects
-
-    .add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
   });
 });
 
